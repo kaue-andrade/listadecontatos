@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 
     <!--Algoritmo feito por: 
     Antonio Carlos Borges de Souza;
@@ -6,9 +7,14 @@
     -->
 
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gerenciador de Contatos</title>
     </head>
     <body>
+
+        <!--Título-->
         <h1>Gerenciador de contatos</h1>
 
         <!--Criação do formulário -->
@@ -68,9 +74,9 @@
       
         <?php 
 
-        //Algoritmo feito por: Antonio Carlos Borges de Souza;Kauê Andrade dos Santos.
+        //Algoritmo feito por: Antonio Carlos Borges de Souza e Kauê Andrade dos Santos.
 
-        // Inicia sessão, verifica se o nome foi enviado, cria um array do tipo contato que armazena dados e ele é armazenas ao final do array '$_SESSION['lista_contatos']'
+        // Inicia sessão, verifica se o nome foi enviado e se ele não está vazio, cria um array do tipo contato que armazena dados e ele é armazenas ao final do array '$_SESSION['lista_contatos']'
 
         session_start();
 
@@ -142,7 +148,7 @@
 
             <?php 
 
-            // Verifica se a variável existe e tem elementos, percorre por meio de um loop (foreach) e armazena cada elemento na variável. Em seguida, cada um dos elementos é exibido em uma célula da tabela HTML
+            // Verifica se a variável existe e tem elementos, percorre por meio de um loop (foreach) e armazena cada elemento na variável. Em seguida, cada um dos elementos é exibido em uma célula da tabela HTML. Assim, cada um vai sendo exibido embaixo do outro
 			
 			if(isset($_SESSION['lista_contatos'])){
 				foreach ($_SESSION['lista_contatos'] as $contato) : 
